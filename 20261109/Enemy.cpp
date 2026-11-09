@@ -1,23 +1,26 @@
-#include "Enemy.h"
 #include<iostream>
+#include"Enemy.h"
 using namespace std;
 
-Enemy::Enemy()
+//コンストラクタ
+Enemy::Enemy(const string& name) :Name(name), hp(100)
 {
-	cout << "Enemyを生成しました。" << endl;
+	cout << name << "が出現しました。\n";
 }
 
+//デストラクタ
 Enemy::~Enemy()
 {
-	cout << "Enemyを破棄しました。" << endl;
+	cout << Name << "を破棄しました。\n";
 }
 
-void Enemy::Update()
+int Enemy::GetHp() const
 {
-	cout << "Enemyを更新しました。" << endl;
+	return hp;
 }
 
-void Enemy::Draw()
+void Enemy::Draw() const
 {
-	cout << "Enemyを描画" << endl;
+	cout << "名前：" << Name << endl;
+	cout << "HP :" << hp << endl;
 }
