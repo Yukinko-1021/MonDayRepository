@@ -1,22 +1,23 @@
 #include "Enemy.h"
 #include<iostream>
+using namespace std;
 
 Enemy::Enemy()
 {
-	std::cout << "Enemyを生成しました。" << std::endl;
+	cout << "Enemyを生成しました。" << endl;
 }
 
 Enemy::~Enemy()
 {
-	std::cout << "Enemyを破棄しました。" << std::endl;
+	cout << "Enemyを破棄しました。" << endl;
 }
 
 void Enemy::Update()
 {
-	std::cout << "Enemyを更新しました。" << std::endl;
+	cout << "Enemyを更新しました。" << endl;
 }
 
 void Enemy::Draw()
 {
-	std::cout << "Enemyを描画" << std::endl;
+	cout << "Enemyを描画" << endl;
 }

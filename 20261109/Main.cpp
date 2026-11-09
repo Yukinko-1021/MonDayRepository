@@ -1,27 +1,21 @@
 #include<iostream>
 #include"Enemy.h"
+using namespace std;
 
 int main(void)
 {
 
-	std::cout << "ゲーム開始" << std::endl;
+	cout << "開始" << endl;
 
-	////Enemy生成
-	//Enemy* enemy = new Enemy();
+	//Enemyを生成
+	unique_ptr<Enemy> enemy = make_unique<Enemy>();
 
-	//スマートポインタでEnemyを生成
-
-	std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>();
-
+	//Enemyの更新
 	enemy->Update();
+	//Enemyの描画
 	enemy->Draw();
 
-	//Enemyを解放
-	//delete enemy;
-	//enemy = nullptr;
-
-	std::cout << "ゲーム終了\n";
+	//Enemyは自動で破棄される
 
 	return 0;
-
 }
